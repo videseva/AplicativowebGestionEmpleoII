@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-sm-3">
+        <app-empresa-menu></app-empresa-menu>
+    </div>
+    <div class="col-sm-9">
+        <div class="card content-box">
+            <div class="card-body">
+                <h3>PERFIL DE LA COMPAÑÍA</h3>
+                <hr>
+                <form class="row">
+                    <div class="form-group col-sm-6">
+                        <label>NIT : </label>
+                        <input disabled="true" name="nit" [(ngModel)]="empresa.nit" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Nombre de la empresa</label>
+                        <input  name="razonSocial" [(ngModel)]="empresa.razonSocial" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Correo electrónico</label>
+                        <input  name="correo" [(ngModel)]="empresa.correo" type="email" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Sitio web</label>
+                        <input name="sitioWeb" [(ngModel)]="empresa.sitioWeb" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Teléfono</label>
+                        <input  name="telefono" [(ngModel)]="empresa.telefono" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Ciudad</label>
+                        <input   name="ciudad" [(ngModel)]="empresa.ciudad" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Dirección</label>
+                        <input name="direccion" [(ngModel)]="empresa.direccion" type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label>Descripción</label>
+                        <textarea name="descripcion" [(ngModel)]="empresa.descripcion" class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <button class="btn btn-primary" (click)="actualizar()">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

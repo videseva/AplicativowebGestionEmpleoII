@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">Gestión de empleo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse d-sm-inline-flex header-nav" [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow nav nav-pills">
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/']">Inicio</a>
+          </li>
+          <li  *ngIf="tipoUsuario == 3"> <a class="nav-link text-dark" [routerLink]="['/aspirantePerfil']">Perfil aspirante</a>
+          </li>
+          <li  *ngIf="tipoUsuario == 2">
+            <a class="nav-link text-dark" [routerLink]="['/empresaPerfil']">Perfil Empresa</a>
+          </li>
+        </ul>
+      </div>
+      <!-- extra nav -->
+      <div  *ngIf="tipoUsuario == null " class="extra-nav">
+        <div class="extra-cell">
+          <a [routerLink]="['/registro']" class="btn btn-primary"><i class="fa fa-user"></i> Registrarse</a>
+          <a [routerLink]="['/login']" class="btn btn-primary"><i class="fa fa-lock"></i> Iniciar sesión </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

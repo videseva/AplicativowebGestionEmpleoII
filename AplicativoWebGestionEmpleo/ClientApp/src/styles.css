@@ -1,0 +1,288 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  background-color: #2e55fa;
+  /*border-color: #1861ac;*/
+}
+
+.btn-primary, .btn-danger, .btn-success{
+  padding: 7px 14px;
+  color: #fff;
+}
+.contenido{
+  margin-top: 117px !important;
+}
+
+.content-box{
+  box-shadow: 0 0 10px 0 rgb(0 24 128 / 10%);
+  -webkit-box-shadow: 0 0 10px 0 rgb(0 24 128 / 10%);
+  -moz-box-shadow: 0 0 10px 0 rgb(0 24 128 / 10%);
+  border: none !important;
+  margin: 15px 0;
+}
+.card-list{
+  border: 1px solid #e1e7ff;
+  border-left: 5px solid #e1e7ff;
+  border-radius: 0;
+  margin: 15px 0;
+}
+
+.tbody-estudio{
+  display: block;
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/*HEADER*/
+nav{
+  border-bottom: 2px solid #2e55fa;
+}
+.header-nav .nav>li {
+  padding: 20px 0;
+  margin: 0 3px;
+}
+.header-nav .nav>li>a {
+  padding: 10px 8px;
+}
+.header-nav .nav>li:hover>a {
+  background-color: #2e55fa;
+  color: #fff !important;
+}
+.extra-nav {
+  padding: 20px 0;
+}
+.extra-nav .extra-cell {
+  display: inline-block;
+  margin-left: 10px;
+}
+.extra-nav a {
+  margin-left: 10px;
+}
+
+/*MENU PERFIL*/
+.menu-perfil{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.menu-perfil li a {
+  display: block;
+  color: #232323;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-top: 1px solid #e1e7ff;
+  border-left: 3px solid transparent;
+}
+
+.menu-perfil li a.active {
+  background: #e1e7ff;
+  border-left-color: #2e55fa;
+  color: #2e55fa;
+}
+
+.menu-perfil li a:hover:not(.active) {
+  background: #e1e7ff;
+  border-left-color: #2e55fa;
+  color: #2e55fa;
+}
+
+.menu-tab{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.menu-tab li a {
+  display: block;
+  color: #232323;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-left: 1px solid #e1e7ff;
+  border-bottom: 3px solid transparent;
+}
+
+.menu-tab li a.active {
+  background: #e1e7ff;
+  border-bottom-color: #2e55fa;
+  color: #2e55fa;
+}
+
+.menu-tab li a:hover:not(.active) {
+  background: #e1e7ff;
+  border-bottom-color: #2e55fa;
+  color: #2e55fa;
+}
+/*FOOTER*/
+footer{
+  color: #c6cffa;
+  display: block;
+  height: 300px;
+}
+.footer-top {
+  padding: 80px 0 20px;
+  background-color: #222845;
+}
+.footer-bottom{
+  background-color: #171d36;
+  padding: 25px 0;
+  color: #c6cffa;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,.05);
+  text-transform: capitalize!important;
+}
+
+.banner{
+  background-image:url(assets/images/workplace.jpg);
+  height: 300px;
+    background-size: cover;
+    background-position: center center;
+    display: table;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+}
+.form-buscar{
+  padding: 15px;
+  opacity: 10;
+  background-color: rgba(255,255,255,.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.cont{
+  display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
+.account{
+  background-image: url(assets/images/workplace.jpg);
+  background-size: cover;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 rgb(0 24 128 / 10%);
+  padding: 30px 20px;
+  z-index: 1;
+  color: #fff;
+}
+.info{
+  background-size: cover;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 rgb(0 24 128 / 10%);
+  padding: 30px 20px;
+  z-index: 1;
+  
+}
+#detalleOfertaAspirante h5 i{
+  color:  #2e55fa;
+}
+#verdetalle h5 i{
+  color:  #2e55fa;
+}
+
+#detalleOferta editarOferta  h5 i{
+  color:  #2e55fa;
+}
+#editarOferta  h5 i{
+  color:  #2e55fa;
+}
+#detalleOfertaPostulacion h5 i{
+  color:  #2e55fa;
+}
+
+#verhojavida h5 i{
+  color:  #2e55fa;
+}
+.bannerregistroA{
+  background-image:url(assets/images/woman.jpg);
+  height: 90%;
+    background-size: cover;
+    background-position: center center;
+    display: table;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border-radius: 0px 0px 200px 0px;
+    -moz-border-radius: 0px 0px 200px 0px;
+    -webkit-border-radius: 0px 0px 200px 0px;
+    
+}
+.btn-outline-info {
+  color: #192665;
+  border-color: #192665;
+}
+
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #192665;
+  border-color: #192665;
+}
+.btn-outline-info:selection {
+  color: #fff;
+  background-color: #192665;
+  border-color: #192665;
+}
+.registroA p{
+color: #6f6f6f;
+font-size: 14px;
+}
+.lineV{
+  border-right:3px solid #e0e0e0;
+}
+
+.Widges{
+  border-left:4px solid #142559;
+}
+.WidgesAs{
+  border-left:4px solid #14C5D9;
+}
+
+.sidebar-footer {
+  width: 100%;
+  bottom: 0;
+  display: flex;
+}
+.container-card{
+  max-height: 800px;
+  overflow: auto;
+}
+
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #bebebe;
+}
+
+.table-postulaciones{
+  overflow-y:scroll;
+  height:400px;
+  width:100%;
+}

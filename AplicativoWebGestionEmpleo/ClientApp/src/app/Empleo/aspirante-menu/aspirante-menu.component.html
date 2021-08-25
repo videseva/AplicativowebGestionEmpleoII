@@ -1,0 +1,16 @@
+<div class="content-box">
+    <ul class="menu-perfil">
+        <li>
+            <img src="../../../assets/images/img_avatar1.jpg" width="100%" />
+            <div class="text-center">
+                <h3>{{ nombreCompleto }}</h3>
+                <span class="user-role">Aspirante</span>
+            </div>
+        </li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/aspirantePerfil']">Perfil</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/aspiranteMiResumen']">Mi resumen</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/aspiranteMisPostulaciones']">Mis postulaciones</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/aspiranteCambiarContrasena']">Cambiar contraseña</a></li>
+        <li><a (click)="cerrarSesion()">Cerrar Sesion</a></li>
+    </ul>
+    </div>

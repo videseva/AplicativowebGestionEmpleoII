@@ -1,0 +1,143 @@
+<div class="row">
+    <div class="col-sm-3">
+        <app-empresa-menu></app-empresa-menu>
+    </div>
+    <div class="col-sm-9">
+        <div class="card content-box">
+            <div class="card-body">
+                <h3>Seleccionar Aspirante</h3>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label>Seleccionar Oferta de empleo :</label>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <select  class="form-control"[(ngModel)]="seleccionado">
+                            <option value="" style="display: none;">Opciones...</option>
+                            <option [value]="item.ofertaId"  *ngFor="let item of ofertas;index as i">{{item.cargo}}</option>
+                          </select>      
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <button class="btn btn-primary" (click)="BuscarAspirante()">Buscar
+                      </button>
+                  </div>
+                </div>
+                <div class="row">
+                        <div class="card-body">
+                            <h4>Postulantes</h4>
+                            <hr>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nombres</th>
+                                        <th>Titulo profesional</th>
+                                        <th>Correo electronico</th>
+                                        <th>Estado</th>
+                                        <th>Hoja de vida</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  *ngFor="let item of postulaciones; index as i">
+                                      <td>{{item.aspirante.nombres}}</td>
+                                      <td>{{item.aspirante.tituloProfesional}}</td>
+                                      <td>{{item.aspirante.correo}}</td>
+                                      <td *ngIf="item.estadoPostulacion == 1">Postulado</td>
+                                      <td *ngIf="item.estadoPostulacion == 3">Rechazada</td>
+                                      <td *ngIf="item.estadoPostulacion == 2">Aceptado</td>
+                                        <td> 
+                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#verhojavida"
+                                            (click)="verAspirante(item.aspirante)" > <i class="far fa-file-alt"></i></button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" (click)="seleccionAspirante(item)"> <i class="fas fa-check-circle"></i></button>
+                                            <button class="btn btn-danger btn-sm"  (click)="cancelarAspirante(item)"><i class="fas fa-times-circle"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="verhojavida" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" >Hoja de vida del aspirante</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+            <div class=" container info-empresa">
+              <h5> <i class="fas fa-info-circle"></i>  Datos Personales</h5>
+              <div class="row">
+                <div class="form-group col-sm-3">
+                  <h6>Nombre Completo  </h6>
+                </div> 
+                <div class="form-group col-sm-3">
+                  <p>{{aspirante.nombres + " " + aspirante.apellidos}}</p>
+                </div>
+                <div class="form-group col-sm-3">
+                    <h6>Titulo Profesional</h6>
+                  </div> 
+                  <div class="form-group col-sm-3">
+                    <p>{{aspirante.tituloProfesional}}</p>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <h6>correo</h6>
+                  </div> 
+                  <div class="form-group col-sm-4">
+                    <p>{{aspirante.correo}}</p>
+                  </div>
+                  <div class="form-group col-sm-2">
+                    <h6>Estado civil</h6>
+                  </div> 
+                  <div class="form-group col-sm-3">
+                    <p>{{aspirante.estadoCivil}}</p>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <h6>Genero</h6>
+                  </div> 
+                  <div class="form-group col-sm-3">
+                    <p>{{aspirante.genero}}</p>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <h6>Telefono</h6>
+                  </div> 
+                  <div class="form-group col-sm-3">
+                    <p>{{aspirante.telefono}}</p>
+                  </div>
+                  </div>
+                  <h5> <i class="fas fa-info-circle"></i>Interese</h5>
+                  <div class="row">
+                    <div class="form-group col-sm-3">
+                      <h6>Salario al que aspira :</h6>
+                    </div> 
+                    <div class="form-group col-sm-3">
+                      <p>{{aspirante.salario}}</p>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <h6>Disponibilidad para viajar :</h6>
+                    </div> 
+                    <div class="form-group col-sm-3">
+                      <p>{{aspirante.diponibilidadViajar}}</p>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <h6>Disponibilidad para cambio :</h6>
+                    </div> 
+                    <div class="form-group col-sm-9">
+                      <p>{{aspirante.disponibilidadCambioResidendia}}</p>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

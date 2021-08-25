@@ -1,0 +1,214 @@
+<div class="row">
+    <div class="col-sm-3">
+        <app-aspirante-menu></app-aspirante-menu>
+    </div>
+    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-9">
+        <div id="accordion">
+            <!-- Informacion Academica-->
+            <div class="card content-box">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fas fa-graduation-cap"></i> Formacion Academica
+                        </button>
+                    </h5>
+                </div>
+
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- Button modal add formacion -->
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addFormacion"
+                            (click)="limpiarinformaiconAcademica()">
+                            agregar<i class="fas fa-plus-circle"></i>
+                        </button>
+                        <hr>
+                        <table class="table table-striped tbody-estudio">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Nivel de Estudio</th>
+                                    <th>Centro educativo</th>
+                                    <th>Estado</th>
+                                    <th>Fecha inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of listadoInformacionAcademica; index as i">
+                                    <td>{{item.informacionAcademicaId}}</td>
+                                    <td>{{item.tipoFormacion}}</td>
+                                    <td>{{item.institucion}}</td>
+                                    <td>{{item.estadoTipoFormacion}}</td>
+                                    <td>{{item.fechaInicio}}</td>
+                                    <td>{{item.fechaFin}}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                            data-target="#addFormacion" (click)="verInformacionAcademica(item)">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Informacion Laboral-->
+            <div class="card content-box">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-briefcase"></i> Experiencia Laboral
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- Button modal add Experiencia Laboral -->
+                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addExperienciaLaboral">
+                            agregar<i class="fas fa-plus-circle"></i>
+                        </button>
+                        <hr>
+                        <table class="table table-striped tbody-estudio">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Empresa </th>
+                                    <th>Cargo</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Fin</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of listadoInformacionLaboral; index as i">
+                                    <td>{{item.informacionLaboralId}}</td>
+                                    <td>{{item.empresa}}</td>
+                                    <td>{{item.cargo}}</td>
+                                    <td>{{item.fechaInicio}}</td>
+                                    <td>{{item.fechaFin}}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal"
+                                            data-target="#addExperienciaLaboral"
+                                            (click)="verInformacionLaboral(item)"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal add-->
+<div class="modal fade" id="addFormacion" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Formación academica</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group col-sm-7">
+                        <label>Nivel Estudio</label>
+                        <select name="tipoFormacion" [(ngModel)]="informacionAcademica.tipoFormacion"
+                            class="form-control">
+                            <option value="" style="display: none;">Opciones...</option>
+                            <option value="Basica Primaria">Basica Primaria</option>
+                            <option value="Basica Secundaria">Basica Secundaria</option>
+                            <option value="Educacion media">Bachillerato/Educacion media</option>
+                            <option value="Universida Tecnica">Universida Tecnica</option>
+                            <option value="Educacion Tecnologica">Universida Tecnologica</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label>Estado</label>
+                        <select name="estadoTipoFormacion" [(ngModel)]="informacionAcademica.estadoTipoFormacion"
+                            class="form-control">
+                            <option value="" style="display: none;">Opciones...</option>
+                            <option value="Culminado">Culminado</option>
+                            <option value="Cursando">Cursando</option>
+                            <option value="Aplazado">Aplazado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label>Fecha Inicio</label>
+                        <input name="fechaInicio" [(ngModel)]="informacionAcademica.fechaInicio" type="date"
+                            class="form-control" placeholder="">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label>Fecha Fin</label>
+                        <input name="fechaFin" [(ngModel)]="informacionAcademica.fechaFin" type="date"
+                            class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label>Centro educativo</label>
+                    <input name="institucion" [(ngModel)]="informacionAcademica.institucion" type="text"
+                        class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="registrarInformacionAcademica()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal add experiencia labora-->
+<!-- Modal -->
+<div class="modal fade" id="addExperienciaLaboral" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Experiencia laboral</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label>Nombre Empresa </label>
+                        <input name="empresa" [(ngModel)]="informacionLaboral.empresa" type="text" class="form-control"
+                            placeholder="">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>Cargo </label>
+                        <input name="cargo" [(ngModel)]="informacionLaboral.cargo" type="text" class="form-control"
+                            placeholder="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label>Fecha Inicio</label>
+                        <input name="fechaInicio" [(ngModel)]="informacionLaboral.fechaInicio" type="date"
+                            class="form-control" placeholder="">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label>Fecha Fin</label>
+                        <input name="fechaFin" [(ngModel)]="informacionLaboral.fechaFin" type="date"
+                            class="form-control" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="regitrarInformacionLaboral()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

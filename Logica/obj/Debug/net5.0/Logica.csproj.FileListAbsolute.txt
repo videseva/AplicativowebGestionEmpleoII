@@ -1,0 +1,34 @@
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.csprojAssemblyReference.cache
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Logica.deps.json
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Logica.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Logica.pdb
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Datos.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Entidad.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Datos.pdb
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\bin\Debug\net5.0\Entidad.pdb
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\User\Documents\ProyectoAplicativoWebGestionEmpleo\Logica\obj\Debug\net5.0\Logica.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Logica.deps.json
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Logica.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\ref\Logica.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Logica.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Datos.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Entidad.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Datos.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\bin\Debug\net5.0\Entidad.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.csproj.AssemblyReference.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\ref\Logica.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Logica\obj\Debug\net5.0\Logica.pdb

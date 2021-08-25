@@ -1,0 +1,283 @@
+<div class="row">
+    <div class="col-sm-3">
+        <app-empresa-menu></app-empresa-menu>        
+    </div>
+    <div class="col-sm-9">
+        <div class="card content-box">
+            <div class="card-body">
+                <h3>GESTIONAR OFERTA</h3>
+                <br>
+                <div class="row justify-content-between">
+                  <div class="form-group col-sm-4">
+                    <div class="card Widges">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col">
+                            <!-- Title -->
+                            <h6 class="text-uppercase text-muted mb-2">
+                              Total Ofertas
+                            </h6>
+                            <!-- Heading -->
+                            <span class="h2 mb-0">
+                              {{totalOfertas}}
+                            </span>
+                
+                          </div>
+                          <div class="col-auto">
+                            <!-- Icon -->
+                            <span class="h2 fe fe-briefcase text-muted mb-0">
+                              <i class="fas fa-suitcase"></i>
+                            </span>
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+                
+                  </div>
+                  <div class="form-group col-4 align-self-end">
+                    <div class="input-group rounded">
+                      <input type="search" [(ngModel)]="searchText" class="form-control rounded" placeholder="Search"
+                        aria-label="Search" aria-describedby="search-addon" />
+                      <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+                <hr>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Cargo profesional</th>
+                            <th>Tipo de trabajo</th>
+                            <th>Salario</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of ofertas|filtroOfertaCargo:searchText; index as i" >
+                            <td>{{item.ofertaId}}</td>
+                            <td>{{item.cargo}}</td>
+                            <td>{{item.tipoTrabajo}}</td>
+                            <td>${{item.salario}}</td>
+                            <td *ngIf="item.estado == 1">Activo</td>
+                            <td *ngIf="item.estado == 0">Inactiva</td>
+                            <td>
+                                <button  class="btn btn-primary btn-sm" data-toggle="modal" data-target="#detalleOferta"(click)="verOferta(item)"><i class="fas fa-eye"></i></button>
+                                 <button class="btn btn-danger btn-sm"(click)="alertConfirmation(item)"><i class="fas fa-trash"></i></button>
+                                 <button class="btn btn-success btn-sm" data-toggle="modal"
+                                 data-target="#editarOferta"
+                                 (click)="verOferta(item)"><i class="fa fa-pencil"></i></button>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal  detalle de oferta-->
+/**
+<div class="modal fade" id="detalleOferta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" >Detalle de la vacante</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <div class=" container info-empresa">
+            <h5><i class="fas fa-info"></i> Detalle de la oferta </h5>
+            <div class="row">
+              <div class="form-group col-sm-3">
+                <h6>Descripcion:</h6>
+              </div>                  
+              <div class="form-group col-sm-9">
+                <p>{{oferta.resumen}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Codigo:</h6>
+                </div>
+              <div class="form-group col-sm-3">
+                  <p>{{oferta.ofertaId}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Cargo:</h6>
+                </div>
+              <div class="form-group col-sm-3">
+                  <p>{{oferta.cargo}}</p>
+              </div>
+              <div class="form-group col-sm-2">
+                <h6>salario:</h6>
+              </div>
+              <div class="form-group col-sm-4">
+                <p>{{oferta.salario}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Tipo de trabajo:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>{{oferta.tipoTrabajo}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Experiencia:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>{{oferta.anoExperiencia}}</p>
+              </div>
+
+              <div class="form-group col-sm-3">
+                <h6>Estado:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>{{oferta.estado}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Fecha:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>fecha</p>
+              </div>
+            </div>
+            <h5><i class="fas fa-exclamation"></i> Requerimientos </h5>
+            <div class="row justify-content-md-center">
+              <div class="form-group col-sm-3">
+                <h6>Disponibilida para viajar:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>{{oferta.diponibilidadViajar}}</p>
+              </div>
+              <div class="form-group col-sm-3">
+                <h6>Disponibilida cambio de residencia:</h6>
+              </div>
+              <div class="form-group col-sm-3">
+                <p>{{oferta.disponibilidadCambioResidendia}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fin modal-->
+
+  <!-- Modal  Editar de oferta-->
+  <div class="modal fade" id="editarOferta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle de la oferta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class=" container info-empresa">
+          <form class="row">
+            <h5><i class="fas fa-info"></i> Detalle de la oferta </h5>
+            <div class="form-group col-sm-12">
+              <label>Descripción</label>
+              <textarea type="Descripción" name="resumen" [(ngModel)]="oferta.resumen" class="form-control"
+                rows="3"></textarea>
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Cargo profesional</label>
+              <input name="cargo" [(ngModel)]="oferta.cargo" type="text" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Correo electrónico</label>
+              <input type="email" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Tipo de trabajo</label>
+              <select name="tipoTrabajo" [(ngModel)]="oferta.tipoTrabajo" class="form-control">
+                <option style="display: none;">Seleccione una opción...</option>
+                <option value="Tiempo completo">Tiempo completo</option>
+                <option value="Tiempo parcial">Tiempo parcial</option>
+                <option value="Puesto de interno">Puesto de interno</option>
+                <option value="Freelance">Freelance</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Experiencia</label>
+              <input name="anoExperiencia" [(ngModel)]="oferta.anoExperiencia" type="text" class="form-control"
+                placeholder="">
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Salario($)</label>
+              <input name="salario" [(ngModel)]="oferta.salario" type="text" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Ciudad</label>
+              <select name="ciudad" class="form-control">
+                <option value="" style="display: none;">Opciones...</option>
+                <option value="Arauca">Arauca</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Barranquilla">Barranquilla</option>
+                <option value="Bogotá">Bogotá</option>
+                <option value="Bucaramanga">Bucaramanga</option>
+                <option value="Cali">Cali</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="Cúcuta">Cúcuta</option>
+                <option value="Florencia">Florencia</option>
+                <option value="Ibagué">Ibagué</option>
+                <option value="Leticia">Leticia</option>
+                <option value="Manizales">Manizales</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Mitú">Mitú</option>
+                <option value="Mocoa">Mocoa</option>
+                <option value="Montería">Montería</option>
+                <option value="Neiva">Neiva</option>
+                <option value="Pasto">Pasto</option>
+                <option value="Pereira">Pereira</option>
+                <option value="Popayán">Popayán</option>
+                <option value="Puerto Carreño">Puerto Carreño</option>
+                <option value="Puerto Inírida">Puerto Inírida</option>
+                <option value="Quibdó">Quibdó</option>
+                <option value="Riohacha">Riohacha</option>
+                <option value="San Andrés">San Andrés</option>
+                <option value="San José del Guaviare">San José del Guaviare</option>
+                <option value="Santa Marta">Santa Marta</option>
+                <option value="Sincelejo">Sincelejo</option>
+                <option value="Tunja">Tunja</option>
+                <option value="Valledupar">Valledupar</option>
+                <option value="Villavicencio">Villavicencio</option>
+                <option value="Yopal">Yopal</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-12">
+              <h5><i class="fas fa-exclamation"></i> Requerimientos </h5>
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Disponibilida para viajar </label>
+              <select name="diponibilidadViajar" [(ngModel)]="oferta.diponibilidadViajar" class="form-control">
+                <option style="display: none;">Seleccione una opción...</option>
+                <option value=" NO">No</option>
+                <option value="SI">Si</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-6">
+              <label>Disponibilida cambio de residencia : </label>
+              <select name="disponibilidadCambioResidendia" [(ngModel)]="oferta.disponibilidadCambioResidendia"
+                class="form-control">
+                <option style="display: none;">Seleccione una opción...</option>
+                <option value=" NO">No</option>
+                <option value="SI">Si</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-primary">Actualizar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Fin modal-->

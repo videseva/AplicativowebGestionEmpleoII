@@ -1,0 +1,176 @@
+<div class="row">
+  <div class="col-sm-3">
+    <app-aspirante-menu></app-aspirante-menu>
+  </div>
+  <div class="col-sm-9">
+    <div class="card content-box">
+      <div class="card-body">
+        <h3>Mis Postulaciones </h3>
+        <hr>
+        <div class="table-postulaciones">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Codigo</th>
+              <th>Cargo</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Oferta</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of postulaciones; index as i">
+              <td>{{item.postulacionId}}</td>
+              <td>{{item.oferta.cargo}}</td>
+              <td>{{item.fechaPostulacion}}</td>
+              <td *ngIf="item.estadoPostulacion == 1">Postulado</td>
+              <td *ngIf="item.estadoPostulacion == 2">Aceptada</td>
+              <td *ngIf="item.estadoPostulacion == 3">Rechazada</td>
+              <td>
+                <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#detalleOfertaPostulacion" 
+                  (click)="verOferta(item)"><i class="fas fa-briefcase"></i></button>
+              </td>
+              <td>    
+                <button class="btn btn-danger btn-sm" (click)="alertConfirmation(item)"><i
+                    class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="verdetalle" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detalle de la postulacion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 lineV">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h5><i class="far fa-building fa-5x"></i></h5>
+                  <h5> Detalle de la Postulacion</h5>
+                </div>
+                <div class="form-group col-md-4">
+                  <h6>Codigo</h6>
+                </div>
+                <div class="form-group col-md-8 ">
+                  <p>{{postulacion.postulacionId}}</p>
+                </div>
+                <div class="form-group col-md-4">
+                  <h6>Estado</h6>
+                  <p>
+                </div>
+                <div class="form-group col-md-8 ">
+                  <p *ngIf="postulacion.estado == 1">postulado</p>
+                </div>
+                <div class="form-group col-md-4">
+                  <h6>fecha </h6>
+                  <p>
+                </div>
+                <div class="form-group col-md-8 ">
+                  <p>{{postulacion.fechaPostulacion}}</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal  detalle de oferta-->
+<div class="modal fade" id="detalleOfertaPostulacion" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" >Detalle de la vacante</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <div class=" container info-empresa">
+          <h5><i class="fas fa-info"></i> Detalle de la oferta </h5>
+          <div class="row">
+            <div class="form-group col-sm-3">
+              <h6>Descripcion:</h6>
+            </div>                  
+            <div class="form-group col-sm-9">
+              <p>{{oferta.resumen}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Codigo:</h6>
+              </div>
+            <div class="form-group col-sm-3">
+                <p>{{oferta.ofertaId}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Cargo:</h6>
+              </div>
+            <div class="form-group col-sm-3">
+                <p>{{oferta.cargo}}</p>
+            </div>
+            <div class="form-group col-sm-2">
+              <h6>salario:</h6>
+            </div>
+            <div class="form-group col-sm-4">
+              <p>{{oferta.salario}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Tipo de trabajo:</h6>
+            </div>
+            <div class="form-group col-sm-3">
+              <p>{{oferta.tipoTrabajo}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Experiencia:</h6>
+            </div>
+            <div class="form-group col-sm-3">
+              <p>{{oferta.anoExperiencia}}</p>
+            </div>
+
+            <div class="form-group col-sm-3">
+              <h6>Estado:</h6>
+            </div>
+            <div class="form-group col-sm-3">
+              <p>{{oferta.estado}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Fecha:</h6>
+            </div>
+          </div>
+          <h5><i class="fas fa-exclamation"></i> Requerimientos </h5>
+          <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+              <h6>Disponibilida para viajar:</h6>
+            </div>
+            <div class="form-group col-sm-3">
+              <p>{{oferta.diponibilidadViajar}}</p>
+            </div>
+            <div class="form-group col-sm-3">
+              <h6>Disponibilida cambio de residencia:</h6>
+            </div>
+            <div class="form-group col-sm-3">
+              <p>{{oferta.disponibilidadCambioResidendia}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin modal-->

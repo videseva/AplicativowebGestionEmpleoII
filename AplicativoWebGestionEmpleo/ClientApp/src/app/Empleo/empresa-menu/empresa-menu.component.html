@@ -1,0 +1,17 @@
+<div class="content-box">
+    <ul class="menu-perfil">
+        <li>
+            <img src="../../../assets/images/img_avatar1.jpg" width="100%" />
+            <div class="text-center">
+                <h3>{{ razonSocial }}</h3>
+            </div>
+        </li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/empresaPerfil']">Perfil</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/ofertaRegistrar']">Regitrar Oferta</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/ofertaGestionar']">Gestionar Oferta</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/empresaGestionarSeleccionAspirante']">Seleccion Aspirante</a></li>
+        <li><a [routerLinkActive]="['active']" [routerLink]="['/empresaCambiarContrasena']">Cambiar contraseña</a></li>
+        <li><a (click)="cerrarSesion()">Cerrar Sesion</a></li>
+    </ul> 
+</div>
+
