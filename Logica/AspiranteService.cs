@@ -107,7 +107,7 @@ namespace Logica
         {
             try
             {
-                var aspirante = _context.Aspirantes.Find(id);
+                var aspirante = _context.Aspirantes.Where(d => d.Identificacion == id).FirstOrDefault();
                 if (aspirante != null)
                 {
                     return new GuardarAspiranteResponse(aspirante);

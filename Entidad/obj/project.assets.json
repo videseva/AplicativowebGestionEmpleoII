@@ -115,11 +115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Entidad\\Entidad.csproj",
+      "projectUniqueName": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
       "projectName": "Entidad",
-      "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Entidad\\Entidad.csproj",
+      "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
       "packagesPath": "C:\\Users\\EVA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Entidad\\obj\\",
+      "outputPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EVA\\AppData\\Roaming\\NuGet\\NuGet.Config"

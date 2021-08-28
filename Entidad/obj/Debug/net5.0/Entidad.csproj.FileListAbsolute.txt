@@ -22,3 +22,15 @@ C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\Proyec
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Entidad\obj\Debug\net5.0\Entidad.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Entidad\obj\Debug\net5.0\ref\Entidad.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\ProyectoAplicativoWebGestionEmpleo-main\ProyectoAplicativoWebGestionEmpleo-main\Entidad\obj\Debug\net5.0\Entidad.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\bin\Debug\net5.0\Entidad.deps.json
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\bin\Debug\net5.0\Entidad.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\bin\Debug\net5.0\ref\Entidad.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\bin\Debug\net5.0\Entidad.pdb
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.csproj.AssemblyReference.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.AssemblyInfo.cs
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\ref\Entidad.dll
+C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Entidad\obj\Debug\net5.0\Entidad.pdb

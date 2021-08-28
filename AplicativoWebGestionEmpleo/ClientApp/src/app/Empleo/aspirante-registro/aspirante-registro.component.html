@@ -13,49 +13,93 @@
                 <h4>INFORMACIÓN PERSONAL</h4> 
                 <p>Si tiene una cuenta con nosotros, inicie sesión.</p> 
             <hr>
-                <form class="row">
-                    <div class="form-group col-sm-4">
-                        <label>Tipo de usuario</label>
+
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Tipo de usuario</label>
+                </div>
+                <div class="form-group col-sm-8">
+                    <select name="tipousuario2" [(ngModel)]="tipoUsuario2" class="form-control" (change)="verificacionUser()">
+                        <option value="" style="display: none;">Opciones...</option>
+                        <option value="Aspirante">Aspirante</option>
+                        <option value="Empresa">Empresa</option>
+                    </select>
+                </div>
+            </div>
+            <form [formGroup]="formGroup" class="row">
+                <div class="form-group col-sm-12" *ngIf="tipoUsuario2 == 'Aspirante'">
+                    <label>Identificacion *</label>
+                    <input type="number" formControlName="identificacion" class="form-control"
+                        [ngClass]="{ 'is-invalid':  control.identificacion.errors}">
+                    <div *ngIf=" control.identificacion.errors" class="invalid-feedback">
+                        <div *ngIf="control.identificacion.errors.max">El Identificación no debe superar 999999999999</div>
+                        <div *ngIf="control.identificacion.errors.required">El Identificación es requerido</div>
                     </div>
-                    <div class="form-group col-sm-8">
-                        <select name="tipoUsuario"  [(ngModel)]="tipoUsuario"class="form-control">
-                            <option value="" style="display: none;">Opciones...</option>
-                            <option value="Aspirante">Aspirante</option>
-                            <option value="Empresa">Empresa</option>
-                        </select>
+                </div>
+                <div class="form-group col-sm-12" *ngIf="tipoUsuario2 == 'Aspirante'">
+                    <label>Nombres *</label>
+                    <input type="text" formControlName="nombres" class="form-control" placeholder="Nombres"
+                        [ngClass]="{ 'is-invalid':  control.nombres.errors }">
+                    <div *ngIf=" control.nombres.errors" class="invalid-feedback">
+                        <div *ngIf="control.nombres.errors.minlength">El nombre debe tener minimo tres caracteres</div>
+                        <div *ngIf="control.nombres.errors.required">El nombre es requerido</div>
                     </div>
-                    <div class="form-group col-sm-12"    *ngIf="tipoUsuario == 'Aspirante'">
-                        <label>Identificacion *</label>
-                        <input type="number" class="form-control" placeholder="identificacion" name="identificacion"  [(ngModel)]="identificacion">
+                </div>
+                <div class="form-group col-sm-12" *ngIf="tipoUsuario2 == 'Aspirante'">
+                    <label>Apellidos *</label>
+                    <input type="text" placeholder="apellidos" formControlName="apellidos" class="form-control"
+                        placeholder="apellidos" [ngClass]="{ 'is-invalid':  control.apellidos.errors }">
+                    <div *ngIf=" control.nombres.errors" class="invalid-feedback">
+                        <div *ngIf=" control.apellidos.errors.minlength">El apellido debe tener minimo tres
+                            caracteres</div>
+                        <div *ngIf="control.apellidos.errors.required">El apellido es requerido</div>
                     </div>
-                    <div class="form-group col-sm-12"*ngIf="tipoUsuario == 'Aspirante'">
-                        <label>Nombres *</label>
-                        <input type="text"   name="nombres" [(ngModel)]="nombres"  class="form-control" placeholder="Nombres">
+                </div>
+                <div class="form-group col-sm-12" *ngIf="tipoUsuario2 == 'Empresa'">
+                    <label>Nit *</label>
+                    <input type="number" formControlName="nit" class="form-control"
+                        [ngClass]="{ 'is-invalid':  control.nit.errors}">
+                    <div *ngIf=" control.nit.errors" class="invalid-feedback">
+                        <div *ngIf="control.nit.errors.min">El nit debe tener minimo 10 digitos</div>
+                        <div *ngIf="control.nit.errors.required">El nit es requerido</div>
                     </div>
-                    <div class="form-group col-sm-12" *ngIf="tipoUsuario == 'Aspirante'">
-                        <label>Apellidos *</label>
-                        <input type="text"   name="apellidos" [(ngModel)]="apellidos" class="form-control" placeholder="Apellido">
+                </div>
+                <div class="form-group col-sm-12" *ngIf="tipoUsuario2 == 'Empresa'">
+                    <label>Razon Social *</label>
+                    <input type="text" name="razonSocial" formControlName="razonSocial" class="form-control"
+                        placeholder="razonSocial" [ngClass]="{ 'is-invalid':  control.razonSocial.errors }">
+                    <div *ngIf=" control.razonSocial.errors" class="invalid-feedback">
+                        <div *ngIf=" control.razonSocial.errors.minlength">La razon socia debe tener minimo tres
+                            caracteres</div>
+                        <div *ngIf="control.razonSocial.errors.required">La razon social es requerida</div>
                     </div>
-                    <div class="form-group col-sm-12"  *ngIf="tipoUsuario == 'Empresa'">
-                        <label>Nit *</label>
-                        <input type="number" name="nit" [(ngModel)]="nit" class="form-control" placeholder="Nit">
+                </div>
+                <div class="form-group col-sm-12">
+                    <label>Correo*</label>
+                    <input type="text" placeholder="correo electronico" formControlName="correo" class="form-control"
+                        [ngClass]="{ 'is-invalid':  control.correo.errors }">
+                    <div *ngIf=" control.correo.errors" class="invalid-feedback">
+                        <div *ngIf="control.correo.errors.maxlength">El correo no debe superar 30 caracteres</div>
+                        <div *ngIf="control.correo.errors.required">El correo es requerido</div>
+                        <div *ngIf="control.correo.errors.email">El correo no es valido</div>
                     </div>
-                    <div class="form-group col-sm-12"*ngIf="tipoUsuario == 'Empresa'">
-                        <label>Razon Social *</label>
-                        <input type="text"  name="razonSocial" [(ngModel)]="razonSocial"class="form-control" placeholder="Razon Social">
+                </div>
+                <div class="form-group col-sm-12">
+                    <label>Contraseña*</label>
+                    <input type="password" placeholder="contraseña" formControlName="contrasena" class="form-control"
+                        [ngClass]="{ 'is-invalid':  control.contrasena.errors }">
+                    <div *ngIf="control.contrasena.errors" class="invalid-feedback">
+                        <div *ngIf="control.contrasena.errors.maxlength">La contraseña no debe superar 8 caracteres</div>
+                        <div *ngIf="control.contrasena.errors.required">La contraseña es requerida</div>
                     </div>
-                    <div class="form-group col-sm-12" >
-                        <label>Correo*</label>
-                        <input type="text"  name="correo" [(ngModel)]="correo" class="form-control" placeholder="correo electronico">
-                    </div>
-                    <div class="form-group col-sm-12" >
-                        <label >Contraseña*</label>
-                        <input type="password"  name="contrasena" [(ngModel)]="contrasena" class="form-control" placeholder="contraseña">
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <button type="button" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" data-dismiss="modal" (click)="RegistrarUsuario()">Registrar</button> 
-                    </div>
-                </form>
+                </div>
+            
+                <div class="form-group col-sm-12">
+                    <button button type="button" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                        (click)="onSubmit()" [disabled]="formGroup.invalid">Registrar</button>
+                </div>
+            </form>
+            
             </div>
         </div>
     </div>

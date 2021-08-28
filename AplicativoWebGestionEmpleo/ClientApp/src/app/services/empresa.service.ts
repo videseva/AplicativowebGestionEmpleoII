@@ -20,13 +20,14 @@ export class EmpresaService {
   post(empresa : Empresa): Observable<Empresa>{
     return this.http.post<Empresa>(this.baseUrl + 'api/Empresa', empresa)
     .pipe(
-      tap(_ => console.log('registrado')),
-        catchError(error =>{
-          console.log("error al registrar")
-          return of(empresa)
+      tap(_ => console.log('Empresa registrada')),
+      catchError(error =>{
+        console.log(error)
+        return of(error)
       })
     );
   }
+
 
   get(): Observable <Empresa[]>{
     return this.http.get<Empresa[]>(this.baseUrl +'api/Empresa/').pipe(
@@ -63,8 +64,8 @@ export class EmpresaService {
     return this.http.get<Empresa>(this.baseUrl +'api/Empresa/correo/'+ correo +'/contrasena/'+ contrasena).pipe(
       tap(_ => console.log('Empresa registrada')),
       catchError(error =>{
-        console.log("error al buscar")
-        return of(error as Empresa)
+        console.log(error)
+        return of(error)
       })
       );
     }

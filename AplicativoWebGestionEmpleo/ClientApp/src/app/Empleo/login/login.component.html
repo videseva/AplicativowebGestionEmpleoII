@@ -13,27 +13,42 @@
                 <h4>INICIAR SESIÓN</h4> 
                 <p>Si no tienes una cuenta con nosotros, Registrate.</p> 
             <hr>
-                <form class="row">
+                <div class="row">
                     <div class="form-group col-sm-4">
                         <label>Tipo de usuario</label>
                     </div>
                     <div class="form-group col-sm-8">
-                        <select name="tipoUsuario" [(ngModel)]="tipoUsuario" class="form-control">
+                        <select name="tipousuario2" [(ngModel)]="tipoUsuario" class="form-control" (change)="verificacionUser()">
                             <option value="" style="display: none;">Opciones...</option>
                             <option value="Aspirante">Aspirante</option>
                             <option value="Empresa">Empresa</option>
                         </select>
                     </div>
+                </div>
+                <form [formGroup]="formGroup" class="row">
                     <div class="form-group col-sm-12">
                         <label>Correo*</label>
-                        <input type="text" name="correo" [(ngModel)]="correo" class="form-control" placeholder="Su direccion de correo electronico">
+                        <input type="text" placeholder="correo electronico" formControlName="correo" class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.correo.errors }">
+                        <div *ngIf=" control.correo.errors" class="invalid-feedback">
+                            <div *ngIf="control.correo.errors.maxlength">El correo no debe superar 30 caracteres</div>
+                            <div *ngIf="control.correo.errors.required">El correo es requerido</div>
+                            <div *ngIf="control.correo.errors.email">El correo no es valido</div>
+                        </div>
                     </div>
                     <div class="form-group col-sm-12">
                         <label>Contraseña*</label>
-                        <input type="password"    name="contrasena"  [(ngModel)]="contrasena"  class="form-control" placeholder="Escriba su contraseña">
+                        <input type="password" placeholder="contraseña" formControlName="contrasena" class="form-control"
+                            [ngClass]="{ 'is-invalid':  control.contrasena.errors }">
+                        <div *ngIf="control.contrasena.errors" class="invalid-feedback">
+                            <div *ngIf="control.contrasena.errors.maxlength">La contraseña no debe superar 8 caracteres</div>
+                            <div *ngIf="control.contrasena.errors.required">La contraseña es requerida</div>
+                        </div>
                     </div>
+                
                     <div class="form-group col-sm-12">
-                        <button type="button" (click)="login()" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" data-dismiss="modal">Ingresar</button> 
+                        <button button type="button" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                            (click)="onSubmit()" [disabled]="formGroup.invalid">Ingresar </button>
                     </div>
                 </form>
             </div>

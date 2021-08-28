@@ -20,6 +20,7 @@ namespace Logica
             try
             {
                 var _empresa = _context.Empresas.Find(empresa.UsuarioId);
+                
                 if (_empresa == null)
                 {
                     empresa.Estado = 1;
@@ -98,7 +99,7 @@ namespace Logica
         {
             try
             {
-                var empresa = _context.Empresas.Find(id);
+                var empresa = _context.Empresas.Where(d => d.Nit == id).FirstOrDefault();
                 if (empresa != null)
                 {
                     return new BuscarEmpresaResponse(empresa);

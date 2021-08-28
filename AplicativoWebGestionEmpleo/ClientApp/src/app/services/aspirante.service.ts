@@ -20,10 +20,10 @@ export class AspiranteService {
   post(aspirante : Aspirante): Observable<Aspirante>{
     return this.http.post<Aspirante>(this.baseUrl + 'api/Aspirante', aspirante)
     .pipe(
-      tap(_ => console.log('registrado')),
+      tap(_ => console.log('Aspirante registrado')),
         catchError(error =>{
-          console.log("error al registrar")
-          return of(aspirante)
+          console.log(error)
+          return of(error)
       })
     );
   }
@@ -62,8 +62,8 @@ export class AspiranteService {
     return this.http.get<Aspirante>(this.baseUrl +'api/Aspirante/correo/'+ correo +'/contrasena/'+ contrasena).pipe(
       tap(_ => console.log('Aspirante registrada')),
       catchError(error =>{
-        console.log("error al buscar")
-        return of(error as Aspirante)
+        console.log(error)
+        return of(error)
       })
       );
     }

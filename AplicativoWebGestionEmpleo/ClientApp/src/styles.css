@@ -206,7 +206,9 @@ footer{
 #detalleOfertaPostulacion h5 i{
   color:  #2e55fa;
 }
-
+.card-body h4 i{
+  color:  #2e55fa;
+}
 #verhojavida h5 i{
   color:  #2e55fa;
 }

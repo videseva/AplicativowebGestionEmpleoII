@@ -77,8 +77,8 @@ import { FiltroOfertaCargoPipe } from './pipe/filtro-oferta-cargo.pipe';
     FiltroOfertaCargoPipe,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     ReactiveFormsModule,
+    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([

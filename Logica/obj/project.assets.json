@@ -6282,11 +6282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Logica\\Logica.csproj",
+      "projectUniqueName": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Logica\\Logica.csproj",
+      "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Logica\\Logica.csproj",
       "packagesPath": "C:\\Users\\EVA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Logica\\obj\\",
+      "outputPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EVA\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6301,11 +6301,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Datos\\Datos.csproj"
+            "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Entidad\\Entidad.csproj": {
-              "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\ProyectoAplicativoWebGestionEmpleo-main\\ProyectoAplicativoWebGestionEmpleo-main\\Entidad\\Entidad.csproj"
+            "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj": {
+              "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj"
             }
           }
         }

@@ -29,11 +29,12 @@ export class AspirantePerfilComponent implements OnInit {
 
   getAspiranteLocalstorage(){
      this.usuario = JSON.parse(localStorage.getItem('usuario')); 
-    console.log(this.usuario);   
+    this.aspirante = this.usuario;
   }
 
   get(){
-    this.aspiranteServices.getId(this.usuario.usuarioId).subscribe(result => {
+    console.log(this.aspirante);   
+    this.aspiranteServices.getId(this.aspirante.identificacion).subscribe(result => {
       this.aspirante = result;
     });
     console.log(this.aspirante);

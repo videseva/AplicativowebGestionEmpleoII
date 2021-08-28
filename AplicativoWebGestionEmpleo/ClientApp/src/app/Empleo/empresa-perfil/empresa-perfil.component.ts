@@ -26,11 +26,12 @@ export class EmpresaPerfilComponent implements OnInit {
 
   getEmpresaLocalstorage() {
     this.usuario = JSON.parse(localStorage.getItem('usuario'));
+    this.empresa = this.usuario;
     console.log(this.usuario);
   }
 
-  get() {
-    this.empresaService.getId(this.usuario.usuarioId).subscribe(result => {
+  get(){
+    this.empresaService.getId(this.empresa.nit).subscribe(result => {
       this.empresa = result;
     });
     console.log(this.empresa);
