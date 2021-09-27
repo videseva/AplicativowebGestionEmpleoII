@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj": {}
+    "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj": {
+    "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
+        "projectPath": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
         "packagesPath": "C:\\Users\\EVA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\obj\\",
+        "outputPath": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EVA\\AppData\\Roaming\\NuGet\\NuGet.Config"

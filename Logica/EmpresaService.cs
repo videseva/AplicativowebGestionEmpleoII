@@ -97,7 +97,8 @@ namespace Logica
 
         public BuscarEmpresaResponse BuscarEmpresaPorId(int id)
         {
-            try
+            if(id >0){
+                            try
             {
                 var empresa = _context.Empresas.Where(d => d.Nit == id).FirstOrDefault();
                 if (empresa != null)
@@ -109,6 +110,9 @@ namespace Logica
             catch (Exception e)
             {
                 return new BuscarEmpresaResponse("Ocurriern algunos Errores:" + e.Message);
+            }
+            }else{
+                return new BuscarEmpresaResponse("El id de la empresa debe ser mayor 0");
             }
 
         }

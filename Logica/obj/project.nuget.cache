@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uidCPxO8vwQVqLvjRwGSorSek+iGDw68PclOr1VZFiGFsu3t/F2pfwQIsbp09dtQS+HchKIz3sZpm0J0Q9p1NA==",
+  "dgSpecHash": "kAyv+4dsm/geQ22Xzm/HMhpxPsqft2TY0gJl1Drnbtgv3gbUC0hzmLCnTufHXGFx8nD6pz+EldotFLYFoLV1Ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Logica\\Logica.csproj",
+  "projectFilePath": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Logica\\Logica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EVA\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\EVA\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",

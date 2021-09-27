@@ -17,7 +17,8 @@ namespace Logica
         
         public GuardarAspiranteResponse GuardarAspirante(Aspirante aspirante)
         {
-            try
+            if(aspirante.Nombres != null && aspirante.Apellidos != null && aspirante.Identificacion >0){
+                 try
             {
                 var _aspirante = _context.Aspirantes.Find(aspirante.UsuarioId);
                 if (_aspirante == null)
@@ -34,6 +35,10 @@ namespace Logica
             {
                 return new GuardarAspiranteResponse("Ocurrieron algunos Errores:" + e.Message);   
             }
+            }else{
+                 return new GuardarAspiranteResponse("Todos los campos son requeridos");
+            }
+           
         }
 
         public ConsultarAspiranteResponse Consultar()
