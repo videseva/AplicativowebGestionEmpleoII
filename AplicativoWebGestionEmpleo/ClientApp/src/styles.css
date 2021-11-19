@@ -288,3 +288,15 @@ font-size: 14px;
   height:400px;
   width:100%;
 }
+
+#verhojavida p{
+  font-size: 17px;
+  color: #6f6f6f;
+}
+
+.img-centro{
+  width: 30%;
+  border-radius: 50%;
+  margin: 5px auto 5px;
+  display: block;
+}

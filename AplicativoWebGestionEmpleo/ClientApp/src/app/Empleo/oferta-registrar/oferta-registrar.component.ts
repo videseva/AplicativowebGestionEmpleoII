@@ -35,6 +35,7 @@ export class OfertaRegistrarComponent implements OnInit {
     this.ofertaService.post(this.oferta).subscribe(result => {
       if(result != null){
         this.oferta = result;
+        this.oferta = new Oferta();
         Swal.fire({
           icon: 'success',
           title: 'Oferta Registrada',

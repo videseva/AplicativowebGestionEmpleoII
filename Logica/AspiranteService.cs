@@ -10,17 +10,20 @@ namespace Logica
     public class AspiranteService
     {
         private readonly GestionEmpleoContext _context;
+
         public AspiranteService(GestionEmpleoContext context)
         {
             _context = context;
         }
-        
+
+
         public GuardarAspiranteResponse GuardarAspirante(Aspirante aspirante)
         {
             if(aspirante.Nombres != null && aspirante.Apellidos != null && aspirante.Identificacion >0){
-                 try
+            try
             {
                 var _aspirante = _context.Aspirantes.Find(aspirante.UsuarioId);
+
                 if (_aspirante == null)
                 {
                     aspirante.Estado = 1;
@@ -168,7 +171,7 @@ namespace Logica
             public Aspirante Aspirante  { get; set; }
             public string Mensaje { get; set; }
             public bool Error { get; set; }
-
+          
 
             public GuardarAspiranteResponse(Aspirante aspirante)
             {

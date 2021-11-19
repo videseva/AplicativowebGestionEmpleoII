@@ -48,6 +48,7 @@ using AspiranteModel.Model;
                 return BadRequest(response.Mensaje);
             }
             private Aspirante MapearAspirante(AspiranteInputModel aspiranteinput){
+                
                 var _aspirante = new Aspirante(){       
                     Identificacion =aspiranteinput.Identificacion,
                     Nombres = aspiranteinput.Nombres,

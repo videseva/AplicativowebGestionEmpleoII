@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { OfertaService } from 'src/app/services/oferta.service';
 import { PostulacionService } from 'src/app/services/postulacion.service';
 import { Aspirante } from '../models/aspirante';
@@ -6,6 +6,9 @@ import { Oferta } from '../models/oferta';
 import { Postulacion } from '../models/postulacion';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
+
+
+
 
 
 @Component({
@@ -35,6 +38,7 @@ export class EmpresaGestionarSeleccionAspiranteComponent implements OnInit {
     this.get();
     this.oferta = new Oferta();
     this.aspirante =  new Aspirante();
+
 
   }
 
@@ -98,6 +102,7 @@ export class EmpresaGestionarSeleccionAspiranteComponent implements OnInit {
     this.opcion=3;
     this.postulacionService.putSeleccion(this.postulacion.postulacionId,this.opcion ,this.postulacion).subscribe(result => {
       this.postulacion = result;
+      
       Swal.fire({
         icon: 'success',
         title: 'Aspirante Rechazado',
@@ -107,5 +112,38 @@ export class EmpresaGestionarSeleccionAspiranteComponent implements OnInit {
       console.log("modifico");
     });
     }
-
+    print(): void {
+      let printContents, popupWin;
+      printContents = document.getElementById('detalledehojavida').innerHTML;
+      popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+      popupWin.document.open();
+      popupWin.document.write(`
+        <html>
+          <head>
+            <title>Hoja de vida -${this.aspirante.identificacion} - ${this.aspirante.nombres} ${this.aspirante.apellidos} </title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+            <style>
+            #verhojavida p{
+              font-size: 17px;
+              color: #6f6f6f;
+            }
+            
+            .img-centro{
+              width: 30%;
+              border-radius: 50%;
+              margin: 5px auto 5px;
+              display: block;
+            }
+            #verhojavida h5 i{
+              color:  #2e55fa;
+            }
+            
+            </style>
+          </head>
+      <body onload="window.print();window.close()">${printContents}</body>
+        </html>`
+      );
+      popupWin.document.close();
+  }
 }

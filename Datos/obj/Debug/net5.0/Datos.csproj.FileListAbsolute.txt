@@ -39,7 +39,6 @@ C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\Aplica
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.AssemblyInfoInputs.cache
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.AssemblyInfo.cs
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.csproj.CoreCompileInputs.cache
-C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.csproj.CopyComplete
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\ref\Datos.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Datos\obj\Debug\net5.0\Datos.pdb

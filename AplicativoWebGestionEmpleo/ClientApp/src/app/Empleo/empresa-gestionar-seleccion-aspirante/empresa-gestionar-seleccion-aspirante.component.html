@@ -12,7 +12,7 @@
                         <label>Seleccionar Oferta de empleo :</label>
                     </div>
                     <div class="form-group col-sm-4">
-                        <select  class="form-control"[(ngModel)]="seleccionado">
+                        <select  class="form-control"[(ngModel)]="seleccionado" (change)="BuscarAspirante()">
                             <option value="" style="display: none;">Opciones...</option>
                             <option [value]="item.ofertaId"  *ngFor="let item of ofertas;index as i">{{item.cargo}}</option>
                           </select>      
@@ -65,7 +65,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="verhojavida" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
               <h5 class="modal-title" >Hoja de vida del aspirante</h5>
@@ -73,70 +73,91 @@
                   <span aria-hidden="true">&times;</span>
               </button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body"id="detalledehojavida">
             <div class=" container info-empresa">
               <h5> <i class="fas fa-info-circle"></i>  Datos Personales</h5>
               <div class="row">
+                <div class="form-group col-sm-12">
+             
+                  <img src="https://e7.pngegg.com/pngimages/114/356/png-clipart-time-student-recruitment-learning-professional-others-service-vector-icons.png" class="img-centro">
+                </div> 
                 <div class="form-group col-sm-3">
-                  <h6>Nombre Completo  </h6>
+                  <h6>Identificacion : </h6>
+                </div> 
+                <div class="form-group col-sm-3">
+                  <p>{{aspirante.identificacion}}</p>
+                </div>
+                <div class="form-group col-sm-3">
+                  <h6>Nombre Completo : </h6>
                 </div> 
                 <div class="form-group col-sm-3">
                   <p>{{aspirante.nombres + " " + aspirante.apellidos}}</p>
                 </div>
+                <div class="form-group col-sm-2">
+                  <h6>Perfil : </h6>
+                </div> 
+                <div class="form-group col-sm-10">
+                  <p>{{aspirante.descripcion}}</p>
+                </div>
                 <div class="form-group col-sm-3">
-                    <h6>Titulo Profesional</h6>
+                    <h6>Titulo Profesional :</h6>
                   </div> 
                   <div class="form-group col-sm-3">
                     <p>{{aspirante.tituloProfesional}}</p>
                   </div>
                   <div class="form-group col-sm-3">
-                    <h6>correo</h6>
+                    <h6>correo :</h6>
                   </div> 
-                  <div class="form-group col-sm-4">
+                  <div class="form-group col-sm-3">
                     <p>{{aspirante.correo}}</p>
                   </div>
-                  <div class="form-group col-sm-2">
-                    <h6>Estado civil</h6>
+                  <div class="form-group col-sm-3">
+                    <h6>Estado civil :</h6>
                   </div> 
                   <div class="form-group col-sm-3">
                     <p>{{aspirante.estadoCivil}}</p>
                   </div>
                   <div class="form-group col-sm-3">
-                    <h6>Genero</h6>
+                    <h6>Genero :</h6>
                   </div> 
                   <div class="form-group col-sm-3">
                     <p>{{aspirante.genero}}</p>
                   </div>
                   <div class="form-group col-sm-3">
-                    <h6>Telefono</h6>
+                    <h6>Telefono :</h6>
                   </div> 
                   <div class="form-group col-sm-3">
                     <p>{{aspirante.telefono}}</p>
                   </div>
+                  <div class="form-group col-sm-3">
+                    <h6>Salario Aspirado :</h6>
+                  </div> 
+                  <div class="form-group col-sm-3">
+                    <p>{{aspirante.salario}}</p>
                   </div>
-                  <h5> <i class="fas fa-info-circle"></i>Interese</h5>
+                  </div>
+                  <h5> <i class="fas fa-info-circle"></i> Interese</h5>
                   <div class="row">
-                    <div class="form-group col-sm-3">
-                      <h6>Salario al que aspira :</h6>
-                    </div> 
-                    <div class="form-group col-sm-3">
-                      <p>{{aspirante.salario}}</p>
-                    </div>
-                    <div class="form-group col-sm-3">
+                    
+                    <div class="form-group col-sm-4">
                       <h6>Disponibilidad para viajar :</h6>
                     </div> 
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-2">
                       <p>{{aspirante.diponibilidadViajar}}</p>
                     </div>
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                       <h6>Disponibilidad para cambio :</h6>
                     </div> 
-                    <div class="form-group col-sm-9">
+                    <div class="form-group col-sm-2">
                       <p>{{aspirante.disponibilidadCambioResidendia}}</p>
                     </div>
                   </div>
 
               </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="print()"><i class="fas fa-download"></i></button>
+
             </div>
           </div>
         </div>

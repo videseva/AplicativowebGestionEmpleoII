@@ -28,6 +28,8 @@ namespace Entidad
         public  string DisponibilidadCambioResidendia { get; set;}
         public List<InformacionLaboral> ExperienciaLaboral{ get; set;}
         public List<InformacionAcademica> FormacionAcademica{ get; set;}
-
     }
+        
+
+   
 }

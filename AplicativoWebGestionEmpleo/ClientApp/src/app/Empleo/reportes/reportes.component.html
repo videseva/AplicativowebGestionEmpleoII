@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-sm-3">
+        <app-empresa-menu></app-empresa-menu>
+    </div>
+    <div class="col-sm-9">
+        <div class="card content-box">
+            <div class="card-body">
+              <h4><i class="fas fa-chart-line"></i> REPORTES</h4>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <label>Ofertas :</label>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <select>
+                            <option value="" style="display: none;">Opciones...</option>
+                           
+                          </select>      
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <button class="btn btn-primary" >Buscar
+                      </button>
+                  </div>
+                </div>
+                <div class="row">
+                        <div class="card-body">
+                            <h4>Postulantes</h4>
+                            <hr>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nombres</th>
+                                        <th>Titulo profesional</th>
+                                        <th>Correo electronico</th>
+                                        <th>Estado</th>
+                                        <th>Hoja de vida</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr >
+
+                                        <td> 
+                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#verhojavida"
+                                            > <i class="far fa-file-alt"></i></button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm"> <i class="fas fa-check-circle"></i></button>
+                                            <button class="btn btn-danger btn-sm"  ><i class="fas fa-times-circle"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

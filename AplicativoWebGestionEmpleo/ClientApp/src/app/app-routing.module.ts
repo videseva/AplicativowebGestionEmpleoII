@@ -22,6 +22,7 @@ import { EmpresaGestionarSeleccionAspiranteComponent } from './Empleo/empresa-ge
 import { LoginComponent } from './Empleo/login/login.component';
 import { AdministradorGestionarAspiranteComponent } from './Empleo/administrador-gestionar-aspirante/administrador-gestionar-aspirante.component';
 import { AdministradorGestionarEmpresaComponent } from './Empleo/administrador-gestionar-empresa/administrador-gestionar-empresa.component';
+import { ReportesComponent } from './Empleo/reportes/reportes.component';
 
 const routes: Routes = [
   {
@@ -100,6 +101,10 @@ const routes: Routes = [
   {
     path: 'ofertaGestionar',
     component: OfertaGestionarComponent
+  },
+  {
+    path: 'reportesEmpresa',
+    component: ReportesComponent
   },
 ];
   

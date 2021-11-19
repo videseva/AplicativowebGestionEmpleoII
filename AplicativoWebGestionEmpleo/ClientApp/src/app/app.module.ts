@@ -40,6 +40,7 @@ import { EmpresaService } from './services/empresa.service';
 import { AdministradorConsultasComponent } from './Pagos/administrador-consultas/administrador-consultas.component';
 import { FiltroUsuarioPipe } from './pipe/filtro-usuario.pipe';
 import { FiltroOfertaCargoPipe } from './pipe/filtro-oferta-cargo.pipe';
+import { ReportesComponent } from './Empleo/reportes/reportes.component';
 
 
 @NgModule({
@@ -75,6 +76,7 @@ import { FiltroOfertaCargoPipe } from './pipe/filtro-oferta-cargo.pipe';
     AdministradorConsultasComponent,
     FiltroUsuarioPipe,
     FiltroOfertaCargoPipe,
+    ReportesComponent,
   ],
   imports: [
     ReactiveFormsModule,

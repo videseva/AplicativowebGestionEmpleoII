@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CXsZHZNLthPwzROpEubEifpca2XDJBJswGeayIJbLoUfPN6xLvf7K51DR2HZ5wvyE7Gq4WtewsTZ2euU56/orA==",
+  "dgSpecHash": "QATUtalSiISuna5Zc6u80HnGPUjfWyQqxR0IZLHCs1Usq4N5kpQmKuJzr64nWvoD4mbaTQYuA97q12/LiRibTQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
+  "projectFilePath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EVA\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],

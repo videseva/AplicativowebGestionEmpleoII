@@ -45,7 +45,6 @@ C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\Aplica
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.AssemblyInfoInputs.cache
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.AssemblyInfo.cs
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.csproj.CoreCompileInputs.cache
-C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.csproj.CopyComplete
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\ref\Logica.dll
 C:\Users\EVA\Documents\Universidad 6° semestre\INGENIERIA DE SOFTWARE II\AplicativowebGestionEmpleoII\Logica\obj\Debug\net5.0\Logica.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZXGqg48UADYlKwsA8g8V/Vsm5i0g2VXGzp1MuFst0NbgFTGPyLOSrn1TMlUNQPznWH96qBhvNlZcXgnCJSOeoA==",
+  "dgSpecHash": "QBjbfdCxBKv3H2U2CNUVtQ3zRbbNXfNwlJf+6PetmaEmrnzzFY3By+1COK/v72eGm3zau3I0nHV120Ft7QiDVw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\EVA\\Documents\\Universidad 6° semestre\\INGENIERIA DE SOFTWARE II\\AplicativowebGestionEmpleoII\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EVA\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\EVA\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
