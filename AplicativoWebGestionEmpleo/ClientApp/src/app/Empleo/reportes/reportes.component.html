@@ -2,55 +2,76 @@
     <div class="col-sm-3">
         <app-empresa-menu></app-empresa-menu>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-9" id="detallereportes">
         <div class="card content-box">
             <div class="card-body">
               <h4><i class="fas fa-chart-line"></i> REPORTES</h4>
                 <hr>
-                <div class="row">
-                    <div class="form-group col-sm-4">
-                        <label>Ofertas :</label>
+                <div class="row justify-content-between">
+                    <div class="form-group col-sm-6">
+                        <button type="button" class="btn btn-primary btn-sm"(click)="print()"><i class="fas fa-download"></i></button>
+                        <h6></h6>
                     </div>
-                    <div class="form-group col-sm-4">
-                        <select>
-                            <option value="" style="display: none;">Opciones...</option>
-                           
-                          </select>      
+                    <div class="form-group col-sm-6">
+                       <h6><i class="fas fa-calendar-week"></i> {{date}}</h6>
                     </div>
-                    <div class="form-group col-sm-4">
-                      <button class="btn btn-primary" >Buscar
-                      </button>
-                  </div>
+                   
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="content-box" >
+                          <div class="card-content">
+                            <div class="card-body"style="border-left:4px solid #F2A007;">
+                              <div class="media d-flex">
+                                <div class="media-body text-right">
+                                  <h3 class="text-warning">{{cantOfertas}} <i class="fas fa-briefcase fa-sm font-large-2 float-left"></i></h3>
+                                  <span>Ofertas Registradas</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="content-box" >
+                          <div class="card-content">
+                            <div class="card-body"style="border-left:4px solid #29a63c;">
+                              <div class="media d-flex">
+                                <div class="media-body text-right">
+                                  <h3 class="text-success">7<i class="far fa-user fa-sm font-large-2 float-left"></i></h3>
+                                  <span>Aspirantes Postulados</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>      
                 </div>
                 <div class="row">
                         <div class="card-body">
-                            <h4>Empresa</h4>
+                            <h6>INFORME</h6>
                             <hr>
+                            <div class="table-wrapper-scroll-y my-custom-scrollbar">
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Nombres</th>
-                                        <th>Titulo profesional</th>
-                                        <th>Correo electronico</th>
-                                        <th>Estado</th>
-                                        <th>Hoja de vida</th>
-                                        <th>Acciones</th>
+                                        <th>cod oferta</th>
+                                        <th>Nombre oferta</th>
+                                        <th>Cant Postulados</th>
+                                        <th>Cant Aceptados</th>
+                                        <th>Cant Rechazados</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr >
-
-                                        <td> 
-                                            <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#verhojavida"
-                                            > <i class="far fa-file-alt"></i></button>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm"> <i class="fas fa-check-circle"></i></button>
-                                            <button class="btn btn-danger btn-sm"  ><i class="fas fa-times-circle"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                    <tr *ngFor="let item of ofertas; index as i" >
+                                        <td>{{item.ofertaId}}</td>
+                                        <td>{{item.cargo}}</td>
+                                    <td>{{cantPostulanteOfertas2}}</td>
+                                      </tr>
+                                </tbody> 
                             </table>
+                            </div>
                         </div>
                 </div>
             </div>

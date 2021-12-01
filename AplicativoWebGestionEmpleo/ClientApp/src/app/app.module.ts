@@ -43,6 +43,8 @@ import { FiltroOfertaCargoPipe } from './pipe/filtro-oferta-cargo.pipe';
 import { ReportesComponent } from './Empleo/reportes/reportes.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +85,7 @@ import { ReportesComponent } from './Empleo/reportes/reportes.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+   
     RouterModule.forRoot([
     { path: '', component: HomeComponent, pathMatch: 'full' },
     { path: 'counter', component: CounterComponent },
